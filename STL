@@ -1,0 +1,28 @@
+//Part of #include <algorithm>
+Important STL Functions to save Time
+
+1->max({a, b, c, d});      ->Max of multiple elements
+2->max_element(start, end) ->max in range
+3->count(begin, end)       ->just as name
+4->accumulate(begin, end)  ->sum of elements in range
+
+5->merge(range1 begin , range1 end, range2 begin, range2 end)  ->merge two sorted ranges.
+
+6->unique(.begin(), .end()) ->removes consecutive duplicates only.
+*Does not change container size.Just returns iterator to the new size.
+
+Read more at cpluscplus.com
+
+        Containers->
+        
+        map
+        unordered_map
+        
+        multimap
+        unordered_multimap
+
+        set
+        multiset
+        
+        unordered_set
+        unordered_multiset
