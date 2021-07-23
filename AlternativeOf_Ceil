@@ -1,0 +1,10 @@
+//Blog-1
+#Alternatives of Ceil Function For avoiding overflows and division errors in c++.
+//Three Ways->
+
+
+1->(a / b + (a % b != 0))
+
+2->((a + b - 1) / b)
+
+3->(a - 1) / b + 1        //Exception at a=0;
