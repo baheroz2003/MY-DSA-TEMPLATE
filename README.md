@@ -1,2 +1,2 @@
 # CP
-Competitive Programming Tips &amp; Tricks that i use frequently
+Competitive Programming Temlate,Tips & Tricks that I use frequently.
