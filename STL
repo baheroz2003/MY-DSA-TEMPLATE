@@ -11,18 +11,54 @@ Important STL Functions to save Time
 6->unique(.begin(), .end()) ->removes consecutive duplicates only.
 *Does not change container size.Just returns iterator to the new size.
 
-Read more at cpluscplus.com
 
-        Containers->
-        
-        map
-        unordered_map
-        
-        multimap
-        unordered_multimap
+7->binary_search(range begin,range end, key)->return true if key found in given range else false;
 
-        set
-        multiset
-        
-        unordered_set
-        unordered_multiset
+8->lower_bound(range begin,range end,key)->returns iterator to first element not smaller than key.
+                                          (if key found returns iterator to key else returns iterator to next greater element)
+                                          (returns iterator to end of range if neither key nor greater element than key are found.)
+                                          
+9->upper_bound(range begin, range end, key)-> returns iterator to first element greater than key.
+                                             (never returns iterator to key even if found. always returns iterator to next greater element.)
+                                             (returns iterator to end of range if greater element than key not found.)
+               {
+                //Example Implementation of lower_bound && upper_bound 
+                A---> a[8]={1,2,3,3,4,6,7,8};                                           //Given ARRAY
+                B->   lower_bound(a,a+8,3);
+                C->   upper_bound(a,a+8,3);
+
+                Statement B will return iterator to 2nd index (first occurence of 3);
+                               2nd Case: Suppose if 3 didn't existed in array then lowerbound would have returned an iterator to 4(next greater element than key).
+                               3rd Case: If neither key nor any element greater than key exist then returns iterator to the end of array
+
+                Statement C will return iterator to 4th index(first element greater than 3);
+                                2nd Case: If neither key nor any element greater than key exist then returns iterator to the end of array
+               }
+
+
+Containers->
+
+map
+unordered_map
+
+multimap
+unordered_multimap
+
+set
+multiset
+
+unordered_set
+unordered_multiset
+
+
+
+
+
+
+
+
+
+
+
+
+Read more (in depth) at cpluscplus.com
