@@ -1,3 +1,3 @@
 # CP
-Competitive Programming Templates,Tips & Tricks that I use frequently.
+Competitive Programming Templates,Tips & Techniques that I use frequently.
 Will be updating regularly.
