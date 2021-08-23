@@ -1,0 +1,26 @@
+Prefix-Sums is a technique used to calculate sum of a given range in O(1) using Pre-Computation.
+Also known as Cumulative Sum because each index  represtents sum of all elements till that index(inclusive).
+
+Implementation:->
+
+int a[5]={1,2,3,4,5};
+for(int i=1;i<n;i++)
+  a[i]=a[i]+a[i-1];
+  
+// New Prefix Array will be {1,3,6,4,10};
+
+APPLICATIONs:-
+1->Sum of all elements till index i will be a[i];
+2->Sum of all elements in a given range(say l to r) will be a[r]-a[l-1].
+    {
+      a[r] will be sum till rth index.subtracting l-1 will remove sum of all elements till l(exclusive).
+      so a[r]-a[l-1] will be the sum of elements b/2 l & r(both inclusive).
+    }   
+
+
+
+
+
+
+
+
