@@ -8,17 +8,22 @@ Important STL Functions to save Time
 
 5->merge(range1 begin , range1 end, range2 begin, range2 end)  ->merge two sorted ranges.
 
-6->unique(.begin(), .end()) ->removes consecutive duplicates only.
-*Does not change container size.Just returns iterator to the new size.
+6->unique(.begin(), .end()) ->
+                                  std::unique(begin, end) goes from begin to end, removes consecutive duplicates and returns the end of the resulting iterator range. So, for example, if vec = {1, 1, 2, 2, 3, 2, 1}, then unique(all(vec)) makes it equal {1, 2, 3, 2, 1, ?, ?} (where ? is not known, but probably the last two symbols are 2 and 1) and returns vec.begin() + 5. Usually, to make a vector containing only its unique elements
+
+7->fill(first,last,val)->fill range [first,last] with val.
+
+8->iota(begin,end,initial_value)->Assigns to every element in the range [begin, end] successive values of initial_value, as if incremented with ++initial_value after each element is written.
 
 
-7->binary_search(range begin,range end, key)->return true if key found in given range else false;
+******************************************************************MORE*******************************************************************
+->binary_search(range begin,range end, key)->return true if key found in given range else false;
 
-8->lower_bound(range begin,range end,key)->returns iterator to first element not smaller than key.
+->lower_bound(range begin,range end,key)->returns iterator to first element not smaller than key.
                                           (if key found returns iterator to key else returns iterator to next greater element)
                                           (returns iterator to end of range if neither key nor greater element than key are found.)
                                           
-9->upper_bound(range begin, range end, key)-> returns iterator to first element greater than key.
+->upper_bound(range begin, range end, key)-> returns iterator to first element greater than key.
                                              (never returns iterator to key even if found. always returns iterator to next greater element.)
                                              (returns iterator to end of range if greater element than key not found.)
                {
@@ -34,6 +39,7 @@ Important STL Functions to save Time
                 Statement C will return iterator to 4th index(first element greater than 3);
                                 2nd Case: If neither key nor any element greater than key exist then returns iterator to the end of array
                }
+
 
 
 Containers->
