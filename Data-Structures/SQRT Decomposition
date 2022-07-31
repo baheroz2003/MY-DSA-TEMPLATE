@@ -1,0 +1,50 @@
+Sqrt Decomposition is a method (or a data structure) that allows us to perform some common operations (finding sum of the elements of the sub-array, finding the minimal/maximal element, etc.) in O(sqrt(n)) operations, which is much faster than O(n) for the trivial algorithm.
+
+The basic idea of sqrt decomposition is preprocessing. We'll divide the array a into blocks of length approximately sqrt(n) , and for each block i we'll precalculate the sum of elements in it block[i]. 
+
+Thus to do sum of elements in a given range [l,r] sum of blocks that are completely overlapped in [l,r] is needed.The sum of those elements, whose block is partially covered in [l,r] can be taken manually, with worst case Time Complexity of O(sqrt(n));
+//See Code for better understanding;
+
+For Updating Simply Subtract from a block previous value & add new value.
+
+public class SqrtDecomposition{
+    vector<int> blocks;
+    vector<int> num;
+                                //PreCalculation
+    NumArray(vector<int>& nums) {
+        num=nums;
+        int n=nums.size();
+        int bs=sqrt(n+0.0)+1;     //Block Size = sqrt(n)+1;
+        blocks.resize(bs);
+        for(int i=0;i<n;i++){
+            blocks[i/bs]+=nums[i];
+        }
+    }
+    
+    void update(int index, int val) {   //Update Query 
+        int bs=blocks.size();
+        int bl=index/bs;
+        blocks[bl]-=num[index];         //Subtract Old Value
+        num[index]=val; 
+        blocks[bl]+=num[index];         //Add New Value
+    }
+    
+    int sumRange(int left, int right) {
+        int bs=num.size();
+        bs=sqrt(bs+0.0)+1;
+        int sum=0;
+        for(int i=left;i<=right;){    
+            if(i%bs==0 && i+bs-1<=right){       //If a block is completey overlapped by [l,r] 
+                sum+=blocks[i/bs];              //add that whole block to sum.
+                i+=bs;
+            }
+            else{                                // else if block is partially overlapped in range [l,r]
+                sum+=num[i];                     // then manually add those overlapped elements to sum.
+                i++;
+            }
+        }
+        return sum;
+    }
+}
+
+Detailed Explanation:-> https://cp-algorithms.com/data_structures/sqrt_decomposition.html#description
