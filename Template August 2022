@@ -1,0 +1,57 @@
+/*          <----------Kamlesh Singh Bisht---------->         */
+//Don't know pragmas yet just put up here.
+//giving error in some cases.
+
+#pragma GCC target ("avx2")
+#pragma GCC optimization ("O3")
+#pragma GCC optimization ("unroll-loops")
+
+#include <bits/stdc++.h>
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+
+using namespace std;
+using namespace __gnu_pbds;
+
+#define f first
+#define endl '\n'
+#define s second
+#define pb push_back
+#define md 998244353
+#define int long long
+#define vi vector<int>
+#define mod 1000000007
+#define inf 1999999999999999999;
+#define vp vector<pair<int,int>>
+#define all(c) c.begin(),c.end()
+#define in(a) for(auto &i:a)cin>>i
+#define dbg(x) cout<<#x<<"->"<<x<<endl;
+#define mem(a,val) memset(a,val,sizeof(a))
+#define out(a)for(auto i:a)cout<<i<<" ";cout<<endl
+#define ebg(x,y) cout<<#x<<"->"<<x<<" "<<#y<<"->"<<y<<endl;
+
+typedef tree<int, null_type, greater_equal<int>, rb_tree_tag, tree_order_statistics_node_update> pbds;
+
+// set -> less, greater , multiset -> less_equal , greater_equal
+// pbds.order_of_key (k) : Number of items strictly smaller than k .
+//*pbds.find_by_order(k) : K-th element in a set (counting from zero).
+
+void solve() {
+
+
+}
+
+int32_t main()
+{
+
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
