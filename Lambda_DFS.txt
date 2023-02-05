@@ -1,0 +1,26 @@
+//Using auto
+
+//Function Declaration+Definition+Storing in a Variable/Function in C++
+auto dfs = [&](int src, auto && dfs)->void {
+  visited[src]++;
+
+  for (int node : adjl[src]) {
+      if (!visited[node]) {
+          dfs(node, dfs);
+      }
+  }
+};
+//Function Call
+dfs(1, dfs);
+
+
+//Without using auto
+function<void(int)> dfs= [&](int src){
+  visited[src]++;
+  for (int node : adjl[src]) {
+      if (!visited[node]) {
+          dfs(node);
+      }
+  }
+}
+dfs(1);
