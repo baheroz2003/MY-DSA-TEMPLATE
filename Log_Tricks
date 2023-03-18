@@ -1,0 +1,50 @@
+Quick Trick:
+log2(5)=2;    //O based index of MSB of 5 in Binary(Base2)
+log10(5)+1=1; //0 based index of MSB if 10 in Base 10=0. Adding 1 will give us the number of digits of 5 in base 10.
+
+Explanation:
+
+Trick1:
+logBASE(n)   returns the index(0 based) of the MSB of n
+
+Example:
+
+        log2(32)=5
+
+            32 in Binary          :  1 0 0 0 0 0
+            0 based reversed index   5 4 3 2 1 0
+
+        so log2(32) returns the index of the MSB of n in given base(2 here)
+
+Trick2: 
+
+     Derivation: 
+         Since logBASE(n) returns the index of the MSB of n in given base this can be further used to calculate number of digits in a number.How?
+         Number of digits in a number is the index(1based) at which its MSB is present.
+
+       Example:
+
+         in base 2 
+              n=32
+              log2(32)=5;
+
+              32: 1 0 0 0 0 0
+         Index:   5 4 3 2 1 0 
+         MSB located at (5th Index in zero based indexing) & (6th Index in 1 based indexing);
+         so No. of digits will be O based indexing +1
+
+         in base 10
+
+           n=1000
+           log10(1000)=3
+         Here also MSB is located at 3rd index (0based) & 3+1=4th Index 1 based.
+
+ As you can see the 1 based index of the MSB is equal to the number of digts of that number,so we have derived this formula:
+
+ logBASE(n)+1       returns no. of digits of n in given BASE  
+    
+
+
+
+
+
