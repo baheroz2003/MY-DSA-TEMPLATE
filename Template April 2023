@@ -1,0 +1,61 @@
+/*          <-----------Kamlesh Singh Bisht----------->         */
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define f first
+#define endl '\n'
+#define s second
+#define pb push_back
+#define md 998244353
+#define int long long
+#define vi vector<int>
+#define mod 1000000007
+#define inf 1999999999999999999
+#define vp vector<pair<int,int>>
+#define all(c) c.begin(),c.end()
+#define rall(c) c.rbegin(),c.rend()
+#define in(a) for(auto &i:a)cin>>i
+#define dbg(x) cout<<#x<<"->"<<x<<endl
+#define mem(a,val) memset(a,val,sizeof(a))
+#define out(a)for(auto i:a)cout<<i<<" ";cout<<endl
+#define ebg(x,y) cout<<#x<<"->"<<x<<" "<<#y<<"->"<<y<<endl
+void yes(int x = 0) {if (!x)cout << "Yes" << endl; else cout << "YES" << endl;}
+void no(int x = 0)  {if (x)cout << "NO" << endl; else cout << "No" << endl;}
+
+/*
+                        -
+                        
+                        FOCUS on the PROBLEM.
+                        
+                        -
+                        
+                        Don't let that determined fresher down,
+                        that you once were.
+                        
+                        -
+                        
+                        Focus on little things.
+                        Big things will take care of themselves.
+                        
+                        -
+*/
+
+void solve() {
+	
+}
+
+int32_t main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	int t = 1;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+
+	return 0;
+}
