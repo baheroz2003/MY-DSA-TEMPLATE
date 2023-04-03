@@ -47,7 +47,7 @@ struct DSU {
 	int find_parent(int node) {
 		if (parent[node] == node)return node;
 		else {
-			return find_parent(parent[node]);
+			return parent[node] = find_parent(parent[node]);
 		}
 	}
 };
