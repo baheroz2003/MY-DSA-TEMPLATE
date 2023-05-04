@@ -12,7 +12,9 @@ int expo(int a, int b, int m) {
   } 
   return res;
 }
-int main(){
+
+int main()
+{
   int n,m;
   cin>>n>>m;
   /*
