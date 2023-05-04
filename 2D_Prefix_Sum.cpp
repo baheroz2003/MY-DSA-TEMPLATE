@@ -6,7 +6,13 @@ The general formula for 2D prefix sum at index (i,j):
                         psum[i-1][j-1] + a[i][j]
 */
 
-// Implementation Below:
+/*
+Encountered in:
+Forest Quries :CSES
+Triptastic :CodeChef (https://www.codechef.com/problems/TRPTSTIC)
+*/
+
+// Implementation :
 #define R 4
 #define C 5
 
@@ -40,7 +46,6 @@ void prefixSum2D(int a[][C])
     }
 }
  
-// driver code
 int main()
 {
     int a[R][C] = { { 1, 1, 1, 1, 1 },
