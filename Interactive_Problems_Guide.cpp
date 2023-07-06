@@ -82,3 +82,41 @@ int32_t main()
 
     return 0;
 }
+//INteractive Problem Example 2: Using  Binary Search
+//Problem Link: https://codeforces.com/problemset/problem/1807/E
+
+//Interactive CODE:
+void solve() {
+    int n; cin >> n;
+    int a[n + 1] = {0}; 
+  for (int i = 1; i <= n; i++)cin >> a[i];
+
+    function<int(int, int)> query = [&](int l, int r) {
+        int sum = 0ll;
+        cout << "? " << r - l + 1 << " ";
+        while (l <= r) {cout << l << " "; l++;}
+        cin >> sum;
+        return sum;
+    };
+
+    int l = 1, h = n + 1;
+    int pre[n + 1] = {0};
+    for (int i = 1; i <= n; i++) {
+        pre[i] = pre[i - 1] + a[i];
+    }
+    int ans = 0;
+    while (l <= h) {
+        int mid = ((h - l) / 2) + l;
+        int weight = query(l, mid);
+        int stones = pre[mid] - (l > 0 ? pre[l - 1] : 0);
+        if (weight == stones) {
+            l = mid + 1;
+        }
+        else {
+            h = mid - 1;
+            ans = mid;
+        }
+    }
+    cout << "! " << ans << endl;
+
+}
