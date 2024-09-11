@@ -1,0 +1,6 @@
+Observations in Variabls sized Sliding Window:
+
+first use a pointer to move the window forward
+then do the operatoin
+then a pointer to shrink the window based on the condition.
+steps2 & 3 can interchange depending on the problem.
